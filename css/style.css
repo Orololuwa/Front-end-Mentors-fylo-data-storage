@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+header {
+    height: 100vh;
+    background: 
+    url(/images/bg-desktop.png) no-repeat,
+    linear-gradient(hsl(229, 57%, 11%), hsl(229, 57%, 11%));
+    background-position: center bottom;
+    background-size: 100% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    position: relative;
+    background-color: hsl(228, 56%, 26%);
+    height: 200px;
+    width: 350px;
+    border-radius: 10px 100px 10px 10px;
+    padding-left: 30px;
+    margin: 0 35px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+i {
+    background-color: hsl(229, 57%, 11%);
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.doc-icon {
+    padding: 20px 12px 10px 12px;
+}
+.upload-icon {
+    padding-bottom: 3px;
+}
+
+.icons a {
+    margin-right: 10px;
+}
+
+.storage-tracker {
+  position: relative;
+  bottom: 0;
+  color: hsl(243, 100%, 93%);
+  width: 525px;
+  height: 150px;
+  background-color: hsl(228, 56%, 26%);
+  margin: 0 35px -50px 0;
+  border-radius: 10px;
+}
+
+.storage-tracker p{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.progress {
+    position: relative;
+    height: 20px;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: hsl(229, 57%, 20%);
+}
+
+.inner-progress {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 81.5%;
+    height: 14px;
+    border-radius: 25px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.end-point{
+    position: absolute;
+    top:1px;
+    right: 2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    background-color: #FFF;
+}
+
+.gigabytes {
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remaining-data {
+    background: hsl(243, 100%, 93%);
+    color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    position: absolute;
+    top: -35%;
+    right: 10%;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+    height: 75px;
+}
+
+.amount{
+    margin: 10px 0 0 0;
+    font-size: 2.5rem;
+    color:hsl(229, 57%, 11%);
+}
+  
+.smaller{
+    font-size: 12px;
+    color:hsl(229, 7%, 55%);
+}
+
+.triangle {
+    border-top: 40px solid transparent;
+    border-right: 40px solid hsl(243, 100%, 93%);
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid transparent;
+    position: absolute;
+    right:0;
+    bottom: -20px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 50px;
+    font-size: 11px;
+    text-align: center;
+    color: hsl(243, 100%, 93%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:375px){
+    header {
+        height: 100vh;
+        background: 
+        url(/images/bg-mobile.png) no-repeat;
+        background-size: cover;
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 320px;
+        height: 185px;
+        margin: 0 auto 20px auto;
+    }
+
+    .storage-tracker {
+        width: 320px;
+        height: 125px;
+        margin: 0 auto 20px auto;
+    }
+
+    .progress {
+        width: 250px;
+    }
+
+    .remaining-data {
+        top: 105px;
+        right: 92px;
+        height: 50px;
+        width: 150px;
+    }
+
+    .amount{
+        font-size: 2rem;
+    }
+      
+    .smaller{
+        font-size: 10px;
+    }
+
+    .triangle {
+        display: none;
+    }
+}
